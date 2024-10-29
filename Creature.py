@@ -9,9 +9,8 @@ class Creature:
         self.is_alive = True
 
     def show_stats(self):
-        print(self.name)
-        print(self.attack_power)
-        print(self.armour_class)
-        print(self.max_health_points)
-        print(self.current_health_points)
-        print(self.is_alive)
+        print(f"Name: {self.name}")
+        print(f"Attack Power: {self.attack_power}d6")
+        print(f"Armour Class: {self.armour_class}")
+        print(f"Max HP: {self.max_health_points}")
+        print(f"Current HP: {self.current_health_points}")
