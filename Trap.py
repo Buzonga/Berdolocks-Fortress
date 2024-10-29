@@ -1,10 +1,9 @@
-import random
 from Dice import Dice
 
-def trap_roll(target):
-    if not target.magic_ring:
+def trap_roll(adventurer):
+    if not adventurer.magic_ring:
         print("You walked into a trap!")
-        roll = random.randint(1, 6)
+        roll = Dice.roll(1)
 
         damage = 0
 
@@ -17,7 +16,7 @@ def trap_roll(target):
             damage = Dice.roll(2)
 
         if roll != 6:
-            target.current_health_points -= damage
+            adventurer.current_health_points -= damage
 
         if roll == 1:
             print(f"You fell into a trapdoor and took {damage} damage.")
@@ -31,9 +30,9 @@ def trap_roll(target):
             print(f"Toxic Gas leaked from the wall and you took {damage} damage.")
         elif roll == 6:
             print("The roof collapses and you die.")
-            target.is_alive = False
-        if roll != 6 and target.current_health_points <= 0:
+            adventurer.is_alive = False
+        if roll != 6 and adventurer.current_health_points <= 0:
             print("You died.")
-            target.is_alive = False
+            adventurer.is_alive = False
     else:
         print("The magic ring warns you about a trap! You avoid the trap.")
