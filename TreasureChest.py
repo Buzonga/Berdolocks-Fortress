@@ -24,16 +24,16 @@ def treasure_roll(adventurer):
             if potions == 0:
                 s = "s"
             print(f"You grab the potion. You now have {potions}"
-                  f"{s}")
+                  f" potion{s}")
         else:
             print("You can not carry more than 4 potions. Leaving this one "
                   "behind")
     elif roll == 3:
-        magic_ring = adventurer.magic_ring
-        if not magic_ring:
-            print("You have found a Ring of Trap Detection! You now can avoid"
+        ring = adventurer.magic_ring
+        if not ring:
+            print("You have found a Ring of Trap Detection! You now can avoid "
                   "traps.")
-            magic_ring = True
+            ring = True
         else:
             print("You already have a Ring of Trap Detection. Leaving this one"
                   "behind")

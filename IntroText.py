@@ -42,7 +42,7 @@ def intro():
         "spread with the wind throughout the known land, provoking among the\n"
         "adventurers a great greed for the treasures that the Fortress\n"
         "possessed.\n"
-
+        "\n"
         "Many ventured out, but none returned to confirm the survivor's story.\n"
         "There will always be an adventurer willing to risk his life for the\n"
         "riches and glories that the Fortress hides.\n"

@@ -34,5 +34,7 @@ def trap_roll(adventurer):
         if roll != 6 and adventurer.current_health_points <= 0:
             print("You died.")
             adventurer.is_alive = False
+        print(f"You have {adventurer.current_health_points} Health Points "
+              f"left;")
     else:
         print("The magic ring warns you about a trap! You avoid the trap.")

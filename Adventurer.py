@@ -1,3 +1,5 @@
+from tkinter.messagebox import showerror
+
 from Creature import Creature
 from Dice import Dice
 from CreateName import create_name
@@ -17,6 +19,8 @@ class Adventurer(Creature):
         self.armour = "Chainmail and Wood Shield"
         self.sword = "Sword"
 
+        self.show_stats()
+
     def show_stats(self):
         super().show_stats()
         print(f"Potions: {self.potion_number}")
@@ -25,3 +29,13 @@ class Adventurer(Creature):
         print(f"Sword: {self.sword}")
         if self.magic_ring:
             print("Magic Ring")
+
+    def drink_potion(self):
+        potions = self.potion_number
+        if potions > 0:
+            self.current_health_points = self.max_health_points
+            print("You drink a Health Potion and recover all your Health "
+                  "Points.")
+            potions -= 1
+        else:
+            print("You don't have any Health Potions to drink.")

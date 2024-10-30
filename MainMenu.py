@@ -1,3 +1,5 @@
+from GameMenu import game_menu
+
 def main_menu():
 
     running = True
@@ -8,10 +10,11 @@ def main_menu():
               "Chose an option:\n"
               "\n"
               "1 - play\n"
-              "0 - quit")
-        if op == 1:
-            pass
-        elif op == 0:
+              "0 - quit\n")
+
+        if op == "1":
+            game_menu()
+        elif op == "0":
             running = False
         else:
             print("Invalid option.")
